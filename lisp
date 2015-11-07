@@ -37,7 +37,7 @@
 	((equal 6 (length (first queue)))
 	 (reverse (first queue)))
 	((equal 5 (length (first queue)))
-	   ( branch-and-bound  start    (sort (append (cons start (first queue))
+	   (branch-and-bound  start    (sort (cons (cons start (first queue))
 			(rest queue))
 		#'(lambda (p1 p2) (shorterp p1 p2)))            )  )
 	 ('else
